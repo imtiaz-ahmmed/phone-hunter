@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phone Hunter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body class="container">
+  <header class="text-center p-3 my-3">
+    <h1>Welcome to Phone Hunter</h1>
+  </header>
+
+  <main >
+
+    <section>
+      <div class="col-auto p-4">
+
+        <input type="text" class="form-control" id="search-input" placeholder="Search Your Phone" value="iphone">
+      </div>
+      <div class="col-auto px-4">
+        <button type="submit" id="search-btn" class="btn btn-primary mb-3">Search</button>
+        <button type="submit" id="clear-btn" class="btn btn-success mb-3">Clear</button>
+      </div>
+     
+    </section>
+
+    <section class="my-3">
+      <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+      </div>
+      <div class="my-5 d-none" id="no-result">
+        <h3 class="text-danger "> No Phone Found. Please Search Again!</h3>
+      </div>
+      <div class="my-5 text-center d-none" id="show-all">
+        <button id="show-all-btn" type="submit" class="btn btn-danger mb-3">Show All</button>
+      </div>
+    </section>
+
+    <!-- Loader Section -->
+    <section id="loader" class="loader d-flex justify-content-center align-items-center my-5 py-5 d-none">
+      <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+      <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-dark" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+    </section>
+
+   
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="phoneInfoModal" tabindex="-1" aria-labelledby="phoneInfoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-success" id="phoneInfoModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="info-body" class="modal-body">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- External JS -->
+  <script src="JS/script.js"></script>
+</body>
+
+</html>
